@@ -40,6 +40,66 @@ namespace MachineLearning
                 FeedbackText = "bad",
                 IsGood = false
             });
+
+            testData.Add(new FeedbackTrainingData()
+            {
+                FeedbackText = "shit",
+                IsGood = false
+            });
+
+            testData.Add(new FeedbackTrainingData()
+            {
+                FeedbackText = "awesome",
+                IsGood = true
+            });
+
+            testData.Add(new FeedbackTrainingData()
+            {
+                FeedbackText = "worst",
+                IsGood = false
+            });
+
+            testData.Add(new FeedbackTrainingData()
+            {
+                FeedbackText = "nice",
+                IsGood = true
+            });
+
+            testData.Add(new FeedbackTrainingData()
+            {
+                FeedbackText = "shitty",
+                IsGood = false
+            });
+
+            testData.Add(new FeedbackTrainingData()
+            {
+                FeedbackText = "ok",
+                IsGood = true
+            });
+
+            testData.Add(new FeedbackTrainingData()
+            {
+                FeedbackText = "very good",
+                IsGood = true
+            });
+
+            testData.Add(new FeedbackTrainingData()
+            {
+                FeedbackText = "terrible",
+                IsGood = false
+            });
+
+            testData.Add(new FeedbackTrainingData()
+            {
+                FeedbackText = "horrible",
+                IsGood = false
+            });
+
+            testData.Add(new FeedbackTrainingData()
+            {
+                FeedbackText = "very bad",
+                IsGood = false
+            });
         }
 
         static void LoadTrainingData()
@@ -53,6 +113,12 @@ namespace MachineLearning
             trainingData.Add(new FeedbackTrainingData()
             {
                 FeedbackText = "this is horrible",
+                IsGood = false
+            });
+
+            trainingData.Add(new FeedbackTrainingData()
+            {
+                FeedbackText = "this is bad",
                 IsGood = false
             });
 
@@ -169,6 +235,30 @@ namespace MachineLearning
                 FeedbackText = "oh this is shit",
                 IsGood = false
             });
+
+            trainingData.Add(new FeedbackTrainingData()
+            {
+                FeedbackText = "this is very good",
+                IsGood = true
+            });
+
+            trainingData.Add(new FeedbackTrainingData()
+            {
+                FeedbackText = "it is terrible",
+                IsGood = false
+            });
+
+            trainingData.Add(new FeedbackTrainingData()
+            {
+                FeedbackText = "it is horrible",
+                IsGood = false
+            });
+
+            trainingData.Add(new FeedbackTrainingData()
+            {
+                FeedbackText = "this is very bad",
+                IsGood = false
+            });
         }
         static void Main(string[] args)
         {
@@ -193,9 +283,7 @@ namespace MachineLearning
 
             Console.WriteLine("Feedback Prediction Model Accuracy : " + metrics.Accuracy);
 
-            string strContinue = "y";
-
-            while (strContinue == "y")
+            while (true)
             {
                 Console.WriteLine("\nEnter Feedback String:");
 
@@ -213,10 +301,6 @@ namespace MachineLearning
                     Console.WriteLine("+ve feedback");
                 else
                     Console.WriteLine("-ve feedback");
-
-                Console.WriteLine("\nContinue ? ( y or n )");
-
-                strContinue = Console.ReadLine().ToString();
             }
         }
     }
